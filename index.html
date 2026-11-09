@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1717b8">
+  <meta name="description" content="Česko-německý jazykový tandem v Perninku, 1.–14. srpna 2027. Dva týdny jazyků, výletů, hudby a letních zážitků.">
+  <title>TANDEM '27 · Pernink</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="screen-noise" aria-hidden="true"></div>
+
+  <main>
+    <section class="welcome" id="welcome" aria-labelledby="welcome-title">
+      <div class="welcome-window window">
+        <div class="window-bar">
+          <span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span>
+          <span class="window-caption">WELCOME.EXE</span>
+          <span class="window-controls" aria-hidden="true">_ □ ×</span>
+        </div>
+        <div class="welcome-content">
+          <p class="eyebrow">SUMMER LANGUAGE CAMP · 2027</p>
+          <div class="welcome-star" aria-hidden="true">✳</div>
+          <h1 id="welcome-title">Rád bych se<br><span>naučil.</span></h1>
+          <p class="welcome-german" lang="de">Ich möchte lernen.</p>
+          <p class="welcome-subtitle">Ein Sommer. Zwei Sprachen. Jede Menge Geschichten.</p>
+          <p class="choose-label">VYBER SI JAZYK / WÄHLE DEINE SPRACHE</p>
+          <div class="language-buttons">
+            <button class="language-button" type="button" data-start-lang="cs">
+              <span class="flag" aria-hidden="true">🇨🇿</span> ČESKY <span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="language-button language-button-de" type="button" data-start-lang="de">
+              <span class="flag" aria-hidden="true">🇩🇪</span> DEUTSCH <span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <p class="welcome-footnote">PERNINK · 01—14 AUGUST 2027</p>
+        </div>
+      </div>
+      <div class="welcome-sticker sticker-pink" aria-hidden="true">GUTEN<br>TAG!</div>
+      <div class="welcome-sticker sticker-yellow" aria-hidden="true">AHOJ! :)</div>
+      <p class="welcome-bottom">BEST VIEWED WITH FRIENDS & GOOD VIBES ★</p>
+    </section>
+
+    <div class="site hidden" id="site">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="Tandem 2027 — začátek">
+          <span class="brand-mark">T</span><span>TANDEM<span class="brand-year">'27</span></span>
+        </a>
+        <nav class="main-nav" id="main-nav" aria-label="Hlavní navigace"></nav>
+        <div class="header-actions">
+          <button class="lang-switch" id="lang-switch" type="button" aria-label="Změnit jazyk">DE / CZ</button>
+          <a class="top-cta" href="#plan" id="top-cta">JDU DO TOHO! <span aria-hidden="true">↘</span></a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Otevřít menu">☰</button>
+      </header>
+
+      <div class="ticker" aria-label="Informace o akci"><div class="ticker-track" id="ticker-track"></div></div>
+
+      <section class="hero section-wrap" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow" id="hero-eyebrow"></p>
+          <h1 id="hero-title"></h1>
+          <p class="hero-lead" id="hero-lead"></p>
+          <div class="hero-buttons">
+            <a class="button button-dark" href="#about" id="hero-primary"></a>
+            <a class="text-link" href="#program" id="hero-secondary"></a>
+          </div>
+          <div class="hero-meta" id="hero-meta"></div>
+        </div>
+        <div class="hero-art" aria-label="Retro ilustrace slunce nad horami a jezerem">
+          <div class="sun"></div>
+          <div class="sun-face">✳</div>
+          <div class="mountain mountain-back"></div>
+          <div class="mountain mountain-front"></div>
+          <div class="lake"></div>
+          <div class="lake-glint glint-one"></div><div class="lake-glint glint-two"></div><div class="lake-glint glint-three"></div>
+          <div class="hero-art-label">SUMMER<br>MODE: ON</div>
+          <div class="hero-art-date">01—14<br><span>08 / 27</span></div>
+          <div class="hero-art-caption">KRUŠNÉ HORY · CZ × DE</div>
+        </div>
+        <div class="hero-bottom-note" id="hero-bottom-note"></div>
+      </section>
+
+      <section class="intro-band" id="about">
+        <div class="section-wrap intro-grid">
+          <p class="section-index">01 / <span id="intro-index-label">O NÁS</span></p>
+          <div>
+            <h2 id="intro-title"></h2>
+            <p class="intro-text" id="intro-text"></p>
+          </div>
+          <div class="intro-stamp" aria-hidden="true"><span>2 TÝDNY</span><strong>∞</strong><span>MOŽNOSTÍ</span></div>
+        </div>
+      </section>
+
+      <section class="section-wrap program-section" id="program">
+        <div class="section-heading">
+          <p class="section-index">02 / <span id="program-index-label">JAK TO BUDE</span></p>
+          <h2 id="program-title"></h2>
+          <p id="program-intro"></p>
+        </div>
+        <div class="day-flow" id="day-flow"></div>
+        <div class="program-note" id="program-note"></div>
+      </section>
+
+      <section class="trip-section" id="trips">
+        <div class="section-wrap">
+          <div class="section-heading trip-heading">
+            <p class="section-index">03 / <span id="trips-index-label">VEN Z CHALUPY</span></p>
+            <h2 id="trips-title"></h2>
+            <p id="trips-intro"></p>
+          </div>
+          <div class="trip-grid" id="trip-grid"></div>
+        </div>
+      </section>
+
+      <section class="section-wrap evenings-section" id="evenings">
+        <div class="evening-poster">
+          <div class="poster-top"><span>LIVE! LIVE! LIVE!</span><span>VOL. 2027</span></div>
+          <div class="poster-spark" aria-hidden="true">✳</div>
+          <h2 id="evening-poster-title"></h2>
+          <p id="evening-poster-subtitle"></p>
+          <div class="poster-bottom"><span>NO SLEEP<br>JUST SUMMER</span><span>★ ★ ★</span></div>
+        </div>
+        <div class="evenings-copy">
+          <p class="section-index">04 / <span id="evenings-index-label">PO ZÁPADU SLUNCE</span></p>
+          <h2 id="evenings-title"></h2>
+          <p id="evenings-text"></p>
+          <div class="evening-tags" id="evening-tags"></div>
+        </div>
+      </section>
+
+      <section class="activity-section" id="play">
+        <div class="section-wrap activity-grid">
+          <div>
+            <p class="section-index">05 / <span id="play-index-label">LETNÍ RANDOMIZER</span></p>
+            <h2 id="activity-title"></h2>
+            <p id="activity-text"></p>
+            <button class="button button-yellow" id="activity-button" type="button"></button>
+            <p class="activity-result" id="activity-result" aria-live="polite"></p>
+          </div>
+          <div class="activity-screen" aria-hidden="true">
+            <div class="screen-top"><span id="screen-title">GENERÁTOR AKTIVIT v1.0</span><span id="screen-rec">● NAHRÁVÁM</span></div>
+            <div class="screen-stars">✦　✳　✦</div>
+            <div class="screen-word">???</div>
+            <div class="screen-bottom" id="screen-footer">STISKNĚTE TLAČÍTKO!</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-wrap packing-section" id="packing">
+        <div class="packing-copy">
+          <p class="section-index">06 / <span id="packing-index-label">NEZAPOMEŇ</span></p>
+          <h2 id="packing-title"></h2>
+          <p id="packing-text"></p>
+          <p class="packing-progress" id="packing-progress" aria-live="polite"></p>
+        </div>
+        <div class="packing-list-wrap">
+          <div class="packing-window-title"><span>MY_SUMMER_BAG.TXT</span><span>▣</span></div>
+          <div class="packing-list" id="packing-list"></div>
+          <button class="reset-list" id="reset-list" type="button"></button>
+        </div>
+      </section>
+
+      <section class="faq-section" id="plan">
+        <div class="section-wrap faq-grid">
+          <div>
+            <p class="section-index">07 / <span id="faq-index-label">DOBRÉ VĚDĚT</span></p>
+            <h2 id="faq-title"></h2>
+            <p id="faq-intro"></p>
+          </div>
+          <div class="faq-list" id="faq-list"></div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="section-wrap footer-inner">
+          <div class="footer-logo">TANDEM<span>'27</span><small>PERNINK · CZ × DE</small></div>
+          <p id="footer-text"></p>
+          <a href="#top" class="back-top" id="back-top">ZPĚT NAHORU ↑</a>
+        </div>
+        <div class="footer-bar"><span>MADE FOR A SUMMER TO REMEMBER</span><span>© TANDEM 2027</span></div>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
