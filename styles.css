@@ -39,11 +39,14 @@ button { cursor: pointer; }
 .window-controls { margin-left: auto; font-size: 15px; letter-spacing: .16em; }
 .welcome-content { padding: clamp(28px, 6vw, 58px); text-align: center; position: relative; }
 .welcome-content .eyebrow { font-size: 11px; margin: 0 0 13px; }
-.welcome h1 { font-size: clamp(54px, 10vw, 100px); line-height: .83; letter-spacing: -.09em; margin: 0; text-transform: uppercase; }
-.welcome h1 span { color: var(--blue); }
+.welcome-slogans { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; margin: 0; text-align: center; }
+.welcome-slogan { min-width: 0; min-height: 150px; padding: 18px 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 2px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); }
+.welcome-slogan-cs { background: var(--yellow); }
+.welcome-slogan-de { background: var(--pink); }
+.slogan-language { display: block; margin-bottom: 13px; color: var(--ink); font-family: var(--mono); font-size: 9px; font-weight: 500; line-height: 1; letter-spacing: .13em; }
+.slogan-text { display: block; color: var(--blue); font-size: clamp(30px, 4.7vw, 43px); font-weight: 700; line-height: .94; letter-spacing: -.075em; text-transform: uppercase; }
 .welcome-star { position: absolute; right: 12%; top: 14%; color: var(--pink); font-size: 54px; transform: rotate(15deg); }
-.welcome-german { color: var(--blue); font-size: clamp(17px, 3vw, 22px); font-weight: 700; letter-spacing: -.04em; margin: 15px 0 0; }
-.welcome-subtitle { font-family: var(--mono); font-size: 11px; margin: 8px 0 38px; }
+.welcome-subtitle { font-family: var(--mono); font-size: 10px; line-height: 1.6; margin: 14px 0 32px; }
 .choose-label { font-size: 10px; margin: 0 0 12px; }
 .language-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .language-button { min-height: 68px; border: 3px solid var(--ink); background: var(--yellow); color: var(--ink); font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; gap: 10px; transition: transform .15s, box-shadow .15s, background .15s; }
@@ -67,7 +70,8 @@ button { cursor: pointer; }
 .main-nav a::after { content: ''; position: absolute; height: 3px; left: 0; right: 100%; bottom: -7px; background: var(--pink); transition: right .2s; }
 .main-nav a:hover::after, .main-nav a:focus-visible::after { right: 0; }
 .header-actions { display: flex; align-items: center; gap: 12px; }
-.lang-switch { border: 0; background: transparent; font-family: var(--mono); font-size: 10px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px; padding: 8px 0; }
+.lang-switch { border: 2px solid var(--ink); background: var(--yellow); color: var(--ink); font-family: var(--mono); font-size: 10px; font-weight: 500; letter-spacing: .06em; padding: 9px 11px; box-shadow: 2px 2px 0 var(--pink); white-space: nowrap; transition: transform .15s, box-shadow .15s; }
+.lang-switch:hover, .lang-switch:focus-visible { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--pink); outline: 2px solid var(--blue); outline-offset: 3px; }
 .top-cta { text-decoration: none; background: var(--pink); border: 2px solid var(--ink); padding: 11px 13px; font-family: var(--mono); font-size: 10px; font-weight: 500; white-space: nowrap; box-shadow: 3px 3px 0 var(--ink); }
 .top-cta:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
 .menu-toggle { display: none; border: 2px solid var(--ink); background: var(--yellow); font-size: 20px; width: 39px; height: 37px; }
@@ -230,10 +234,12 @@ button { cursor: pointer; }
   .welcome { padding: 30px 22px 55px; }
   .welcome-window { box-shadow: 7px 7px 0 var(--pink), 13px 13px 0 rgba(0,0,0,.2); transform: rotate(0); }
   .welcome-content { padding: 34px 22px 29px; }
-  .welcome h1 { font-size: clamp(49px, 15vw, 72px); }
+  .welcome-slogans { grid-template-columns: 1fr; gap: 10px; }
+  .welcome-slogan { min-height: 104px; padding: 12px 10px; }
+  .slogan-language { margin-bottom: 8px; font-size: 8px; }
+  .slogan-text { font-size: clamp(32px, 10vw, 42px); }
   .welcome-star { right: 6%; top: 12%; font-size: 36px; }
-  .welcome-german { font-size: 17px; margin-top: 13px; }
-  .welcome-subtitle { margin: 7px 0 30px; font-size: 9px; }
+  .welcome-subtitle { margin: 12px 0 27px; font-size: 8px; }
   .language-buttons { grid-template-columns: 1fr; gap: 9px; }
   .language-button { min-height: 57px; }
   .welcome-sticker { font-size: 9px; padding: 10px 8px; }

@@ -132,7 +132,7 @@ function renderLanguage(lang) {
   $('#welcome').classList.add('hidden');
   $('#site').classList.remove('hidden');
   $('#main-nav').innerHTML = t.nav.map(([id, label]) => `<a href="#${id}">${label}</a>`).join('');
-  setText('#lang-switch', lang === 'cs' ? 'DEUTSCH ↗' : 'ČESKY ↗');
+  setText('#lang-switch', 'CZ / DE ↗');
   $('#lang-switch').setAttribute('aria-label', lang === 'cs' ? 'Zur deutschen Version wechseln' : 'Přepnout na českou verzi');
   setText('#top-cta', t.topCta + ' ↘');
   $('#ticker-track').innerHTML = [...t.ticker, ...t.ticker].map(item => `<span>✳ <b>${item}</b></span>`).join('');
